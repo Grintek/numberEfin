@@ -1,13 +1,7 @@
 package com.number;
 
 
-import com.sun.org.apache.xerces.internal.impl.xpath.regex.Match;
-
 import java.io.*;
-import java.util.Comparator;
-import java.util.Scanner;
-import java.util.Set;
-import java.util.TreeSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
