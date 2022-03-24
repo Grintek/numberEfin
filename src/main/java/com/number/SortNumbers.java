@@ -6,6 +6,7 @@ import java.util.Comparator;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.regex.Pattern;
 
 /**
  * @author Grigory Yakovlev
@@ -13,7 +14,7 @@ import java.util.TreeSet;
 public class SortNumbers {
     public static void main(String[] args) {
         String fileName = "/mnt/3696B2E796B2A731/job/efin/efin/configurations.properties";
-
+        int oldNumber;
 
         try {
             File file = new File(fileName);
@@ -28,8 +29,9 @@ public class SortNumbers {
 
             String line = reader.readLine();
             while (line != null) {
-                int star = line.indexOf(".") + 1;
-                String num = line.substring(star, star + 3);
+                int pointIndex = line.indexOf(".") + 1;
+                String num = line.substring(pointIndex, pointIndex + 3);
+                oldNumber = Integer.parseInt(num);
                 buffer.append(line);
                 buffer.append(System.lineSeparator());
                 System.out.println(line);
@@ -44,5 +46,11 @@ public class SortNumbers {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public String getNumber(String str){
+        String regex = "^efin.";
+        Pattern pattern = Pattern.compile(regex);
+        return str;
     }
 }
