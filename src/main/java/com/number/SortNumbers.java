@@ -2,6 +2,7 @@ package com.number;
 
 
 import java.io.*;
+import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -11,10 +12,12 @@ import java.util.regex.Pattern;
 public class SortNumbers {
     static Integer oldValue = 0;
     public static void main(String[] args) {
-        String fileName = "/home/grisha/Загрузки/configurations.properties";
+        Scanner in = new Scanner(System.in);
+        System.out.print("Введиет путь к файлу: ");
+        String filePath = in.next();
 
         try {
-            File file = new File(fileName);
+            File file = new File(filePath);
             //создаем объект FileReader для объекта File
             FileReader fr = new FileReader(file);
             //создаем объект FileWriter для объекта File
